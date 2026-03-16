@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -6,12 +6,12 @@ export default function Navigation() {
   const { language, toggleLanguage } = useLanguage();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-16 py-8 flex items-center justify-between">
-      <div className="text-2xl font-semibold">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-5 md:py-8 flex items-center justify-between">
+      <div className="text-xl md:text-2xl font-semibold">
         WEBKART<sup className="text-sm">°</sup>
       </div>
       
-      <div className="flex items-center gap-8">
+      <div className="hidden md:flex items-center gap-8">
         <a href="#" className="px-6 py-2 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-200 transition">
           Studio
         </a>
@@ -24,7 +24,7 @@ export default function Navigation() {
        
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-2 md:gap-4">
         {/* Language Switcher */}
         <button 
           onClick={toggleLanguage}
@@ -53,3 +53,4 @@ export default function Navigation() {
     </nav>
   );
 }
+

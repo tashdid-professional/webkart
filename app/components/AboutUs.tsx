@@ -34,12 +34,12 @@ export default function AboutUs() {
       <div className="max-w-7xl mx-auto relative z-10">
 
         {/* Top header row */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-20 pb-12 border-b border-white/10">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-12 md:mb-20 pb-10 md:pb-12 border-b border-white/10">
           <div>
             <p className="text-xs font-semibold tracking-[0.35em] text-purple-400 mb-5 uppercase">
               About Us
             </p>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
               Bangladesh's Most<br />
               <span className="text-purple-400">Affordable</span> E-Commerce
             </h2>
@@ -123,13 +123,13 @@ export default function AboutUs() {
         </div>
 
         {/* Stats bar */}
-        <div className="border border-white/10 bg-white/[0.03] rounded-2xl grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/10">
+        <div className="border border-white/10 bg-white/[0.03] rounded-2xl grid grid-cols-3 divide-x divide-white/10">
           {stats.map((s) => (
-            <div key={s.label} className="px-10 py-10 text-center group hover:bg-white/[0.03] transition-colors duration-300">
-              <div className="text-5xl md:text-6xl font-bold text-purple-400 mb-3 group-hover:scale-105 transition-transform duration-300 inline-block">
+            <div key={s.label} className="px-3 py-6 sm:px-6 sm:py-8 md:px-10 md:py-10 text-center group hover:bg-white/[0.03] transition-colors duration-300">
+              <div className="text-2xl sm:text-4xl md:text-5xl font-bold text-purple-400 mb-1.5 sm:mb-2 md:mb-3 group-hover:scale-105 transition-transform duration-300 inline-block">
                 {s.value}
               </div>
-              <p className="text-gray-400 text-sm tracking-wide uppercase">{s.label}</p>
+              <p className="text-gray-400 text-[10px] sm:text-xs md:text-sm tracking-wide uppercase">{s.label}</p>
             </div>
           ))}
         </div>
@@ -155,3 +155,4 @@ export default function AboutUs() {
     </section>
   );
 }
+

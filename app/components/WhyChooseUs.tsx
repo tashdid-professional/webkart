@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -90,18 +90,18 @@ export default function WhyChooseUs() {
   const { language } = useLanguage();
 
   return (
-    <section id="why-choose-us" className="min-h-screen bg-[#0a0a0a] text-white px-8 md:px-16 py-24 relative overflow-hidden">
+    <section id="why-choose-us" className="bg-[#0a0a0a] text-white px-4 sm:px-6 md:px-16 py-16 md:py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/3 left-0 w-96 h-96 bg-purple-900/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="mb-20 text-center">
-          <p className="text-sm font-medium tracking-[0.3em] mb-4 text-gray-400">
+        <div className="mb-10 md:mb-16 text-center">
+          <p className="text-xs sm:text-sm font-medium tracking-[0.3em] mb-4 text-gray-400">
             {language === 'en' ? 'WHY CHOOSE US' : 'কেন আমাদের বেছে নেবেন'}
           </p>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6">
             <span className="block text-white">
               {language === 'en' ? 'Built For Startups,' : 'স্টার্টআপদের জন্য তৈরি,'}
             </span>
@@ -109,7 +109,7 @@ export default function WhyChooseUs() {
               {language === 'en' ? 'Designed For Success' : 'সাফল্যের জন্য ডিজাইন করা'}
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-300 mt-4 md:mt-6 max-w-3xl mx-auto">
             {language === 'en'
               ? 'Everything you need to launch and grow your e-commerce business — without the complexity or the hefty price tag.'
               : 'আপনার ই-কমার্স ব্যবসা শুরু এবং বৃদ্ধি করার জন্য আপনার যা প্রয়োজন — জটিলতা বা ভারী মূল্য ট্যাগ ছাড়াই।'}
@@ -117,44 +117,44 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 md:gap-8">
           {features.map((feature, index) => (
             <div
               key={feature.id}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-purple-500/30 hover:shadow-2xl hover:shadow-purple-900/20 transition-all duration-500 group"
+              className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl md:rounded-2xl p-4 sm:p-5 md:p-8 hover:bg-white/10 hover:border-purple-500/30 hover:shadow-2xl hover:shadow-purple-900/20 transition-all duration-500 group"
               style={{
                 transitionDelay: `${index * 50}ms`,
               }}
             >
               {/* Icon */}
-              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 md:mb-6 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300">
+              <h3 className="text-sm sm:text-base md:text-xl font-bold text-white mb-2 md:mb-4 group-hover:text-purple-400 transition-colors duration-300">
                 {language === 'en' ? feature.title : feature.titleBn}
               </h3>
 
               {/* Description */}
-              <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
+              <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
                 {language === 'en' ? feature.description : feature.descriptionBn}
               </p>
 
               {/* Bottom Accent Line */}
-              <div className="mt-6 h-1 w-0 bg-linear-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-500 rounded-full"></div>
+              <div className="mt-3 md:mt-6 h-1 w-0 bg-linear-to-r from-purple-500 to-blue-500 group-hover:w-full transition-all duration-500 rounded-full"></div>
             </div>
           ))}
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-20 text-center">
-          <p className="text-gray-400 mb-6 text-lg">
+        <div className="mt-12 md:mt-20 text-center">
+          <p className="text-gray-400 mb-5 text-base md:text-lg">
             {language === 'en'
               ? 'Ready to transform your business idea into reality?'
               : 'আপনার ব্যবসায়িক ধারণাকে বাস্তবে রূপান্তরিত করতে প্রস্তুত?'}
           </p>
-          <button className="px-12 py-5 bg-purple-900 text-white rounded-full text-base font-medium hover:bg-purple-800 hover:shadow-lg hover:shadow-purple-900/50 transition-all duration-300 inline-flex items-center gap-3 group">
+          <button className="px-8 sm:px-12 py-4 sm:py-5 bg-purple-900 text-white rounded-full text-sm sm:text-base font-medium hover:bg-purple-800 hover:shadow-lg hover:shadow-purple-900/50 transition-all duration-300 inline-flex items-center gap-3 group">
             {language === 'en' ? 'Start Your Journey Today' : 'আজই আপনার যাত্রা শুরু করুন'}
             <span className="w-2 h-2 bg-white rounded-full group-hover:translate-x-1 transition-transform"></span>
           </button>
@@ -163,3 +163,4 @@ export default function WhyChooseUs() {
     </section>
   );
 }
+

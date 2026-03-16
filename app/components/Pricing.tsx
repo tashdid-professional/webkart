@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../utils/translations';
@@ -56,15 +56,15 @@ export default function Pricing() {
   const { language } = useLanguage();
 
   return (
-    <section id='pricing' className="min-h-screen bg-[#0a0a0a] px-8 md:px-16 py-24 relative overflow-hidden">
+    <section id='pricing' className="bg-[#0a0a0a] px-4 sm:px-6 md:px-16 py-16 md:py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+        <div className="mb-10 md:mb-16 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-4 md:mb-6">
             <span className="block text-white">
               {language === 'en' ? 'CHOOSE THE WEBSITE' : 'ওয়েবসাইট নির্বাচন করুন'}
             </span>
@@ -72,7 +72,7 @@ export default function Pricing() {
               {language === 'en' ? "THAT'S RIGHT FOR YOU" : 'যা আপনার জন্য সঠিক'}
             </span>
           </h2>
-          <p className="text-lg md:text-xl text-gray-300 mt-6 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-300 mt-4 md:mt-6 max-w-3xl mx-auto">
             {language === 'en'
               ? 'We take care of your web world, so you can focus where it matters – on your business'
               : 'আমরা আপনার ওয়েব জগতের যত্ন নিই, যাতে আপনি গুরুত্বপূর্ণ বিষয়ে মনোনিবেশ করতে পারেন – আপনার ব্যবসায়'}
@@ -85,11 +85,11 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
           {pricingTiers.map((tier, index) => (
             <div
               key={tier.id}
-              className="bg-linear-to-br from-gray-900 via-black to-gray-900 border border-white/10  p-8 md:p-10 hover:border-purple-900/50 hover:shadow-2xl hover:shadow-purple-900/20 transition-all duration-500 flex flex-col  group relative overflow-hidden"
+              className="bg-linear-to-br from-gray-900 via-black to-gray-900 border border-white/10 p-5 sm:p-7 md:p-10 hover:border-purple-900/50 hover:shadow-2xl hover:shadow-purple-900/20 transition-all duration-500 flex flex-col group relative overflow-hidden"
               style={{
                 transitionDelay: `${index * 100}ms`,
               }}
@@ -99,7 +99,7 @@ export default function Pricing() {
               
               {/* Card Header */}
               <div className="text-center mb-8 relative z-10">
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
+                <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-white mb-2 md:mb-3 group-hover:text-purple-400 transition-colors duration-300">
                   {language === 'en' ? tier.title : tier.titleBn}
                 </h3>
                 <p className="text-base text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
@@ -117,7 +117,7 @@ export default function Pricing() {
                 </p>
                 <div className="flex items-start justify-center mb-2">
                   <span className="text-lg font-semibold text-purple-500 mt-2 group-hover:text-purple-400 transition-colors duration-300">{tier.currency}</span>
-                  <span className="text-5xl md:text-6xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">{tier.price}</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300">{tier.price}</span>
                   <span className="text-lg text-gray-400 mt-4 ml-1 group-hover:text-gray-300 transition-colors duration-300">
                     /{language === 'en' ? 'Month' : 'মাস'}
                   </span>
@@ -163,3 +163,4 @@ export default function Pricing() {
     </section>
   );
 }
+

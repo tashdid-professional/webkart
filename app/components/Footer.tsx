@@ -1,8 +1,8 @@
-'use client';
+﻿'use client';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white py-16 w-full">
+    <footer className="bg-[#0a0a0a] text-white py-10 md:py-16 w-full">
       {/* Large WEBKART Text */}
       <div className="w-full overflow-hidden">
         <h2 className="text-[18.25vw] font-bold leading-none text-center m-0 p-0 whitespace-nowrap">
@@ -11,7 +11,7 @@ export default function Footer() {
       </div>
 
       {/* Social Links */}
-      <div className="flex items-center justify-center gap-8 mt-12">
+      <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 md:gap-8 mt-8 md:mt-12">
         <a 
           href="https://facebook.com" 
           target="_blank" 
@@ -53,7 +53,7 @@ export default function Footer() {
       </div>
 
       {/* Copyright */}
-      <div className="text-center mt-8">
+      <div className="text-center mt-6 md:mt-8">
         <p className="text-xs text-gray-500">
           © 2026 WebKart. All rights reserved.
         </p>
@@ -61,3 +61,4 @@ export default function Footer() {
     </footer>
   );
 }
+
